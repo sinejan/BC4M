@@ -21,7 +21,7 @@ public class Controller {
     // GET /health
     @GetMapping("/health")
     public ResponseEntity<String> healthCheck() {
-        return ResponseEntity.ok("{\"status\":\"healthy\"}");
+        return ResponseEntity.ok("Application is running");
     }
 
     // POST /
