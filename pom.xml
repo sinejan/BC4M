@@ -1,0 +1,54 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Proje Bilgileri -->
+    <groupId>com.example</groupId>
+    <artifactId>my-api</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>My API</name>
+    <description>Spring Boot uygulaması</description>
+
+    <!-- Maven Wrapper ile uyumlu Spring Boot sürümünü belirleyin -->
+    <properties>
+        <java.version>17</java.version> <!-- Java versiyonunu kendi ihtiyacınıza göre değiştirin -->
+        <spring-boot.version>3.2.5</spring-boot.version> <!-- Spring Boot sürümünü kontrol edin ve güncelleyin -->
+    </properties>
+
+    <!-- Spring Boot Starter Parent -->
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.2.5</version> <!-- Burada doğrudan sürüm numarasını verin -->
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <!-- Bağımlılıklar -->
+    <dependencies>
+        <!-- Spring Boot Starter Web: Web uygulamaları için gerekli bağımlılıkları içerir -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- Spring Boot Test Starter: Testler için gerekli bağımlılıkları içerir -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <!-- Maven Build -->
+    <build>
+        <plugins>
+            <!-- Spring Boot Maven Plugin: Spring Boot uygulamalarını paketler -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
